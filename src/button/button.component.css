@@ -1,0 +1,24 @@
+.btn {
+  background: transparent;
+  color: #fff;
+  border-color: var(--primary-color);
+  font: inherit;
+
+  border-width: 2px;
+  padding: 1.1em 4.4em 1em;
+  border-style: solid;
+  border-radius: 2em;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2.88px;
+}
+
+.btn.disabled {
+  background: rgba(180, 158, 191, 0.2);
+}
