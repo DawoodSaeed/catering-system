@@ -1,19 +1,27 @@
 .container {
   width: 90%;
   margin: auto;
-  padding: 20px 70px 70px 70px;
+  /* padding: 20px 70px 70px 70px; */
   border-top: 6px solid #eee;
   /* border-radius: 8px; */
 
   background: url("https://alanzo.ancorathemes.com/wp-content/uploads/2017/09/bg-10.jpg?id=359")
     no-repeat center center fixed;
   background-size: cover;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  & > div.svg {
+    text-align: center;
+  }
 }
 
 .title {
   display: inline-block;
 
   & > h2 {
+    margin: 0;
     font-size: 2.667rem;
     /* For the icon... */
     &::after {
@@ -58,8 +66,8 @@
   .form-group {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 30px; */
   }
 
   .agreement {
@@ -102,108 +110,30 @@
   margin-top: 20px;
 }
 
-header {
-  margin-top: 20px;
-  /* border: 1px solid var(--text-color); */
-  width: 90%;
-  margin: auto;
-  background: url("../assets/background_2.jpg") no-repeat center center fixed;
-  background-size: cover;
-  padding: 0.1px 0;
-  /* border: 1px solid var(--primary-color); */
-  /*  */
+/* For the svg section */
 
-  display: grid;
-  grid-template-columns: 0.4fr 0.2fr 0.4fr;
-  align-items: center;
-
-  .nav-right ul {
-    justify-content: flex-start;
-    padding-left: 20px;
-  }
-
-  position: relative;
-  &::after {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-    position: absolute;
-    left: 0px;
-    bottom: -5px;
-
-    animation: borderAnimation 4s ease-in infinite;
-  }
-
-  .nav-logo img {
-    object-fit: cover;
-    width: 100%;
-  }
-  .nav-left ul {
-    padding-right: 20px;
-    justify-content: flex-end;
-  }
-
-  .nav-right ul,
-  .nav-left ul {
-    display: flex;
-    list-style: none;
-    & > li {
-      margin: 0 0.5em;
-      position: relative;
-    }
-
-    & > li::after {
-      transition: all 0.4s ease-in;
-    }
-    & a {
-      text-decoration: none;
-      color: var(--text-color);
-    }
-
-    & > li:hover ::after {
-      content: "\e962";
-      font-family: fontello;
-      position: absolute;
-      font-size: 4.444rem;
-      position: absolute;
-      z-index: 1;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
+.svg {
+  filter: contrast(0.5);
+  & > h2 {
+    font-size: 2.667rem;
+    /* For the icon... */
+    &::after {
+      content: "\e957";
+      -webkit-transform: scale(-1, -1);
+      transform: scale(-1, -1);
+      text-align: right;
+      font-size: 38px;
+      margin-top: 0.525em;
+      color: var(--primary-color);
+      display: block;
+      line-height: 0.22;
       font-weight: 400;
+      margin-bottom: 0.2em;
+      font-family: fontello;
     }
   }
 }
 
-.active::after {
-  content: "\e962";
-  font-family: fontello;
-  position: absolute;
-  font-size: 4.444rem;
-  position: absolute;
-  z-index: 1;
-  bottom: -0.1em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  font-weight: 400;
-}
-
-@keyframes borderAnimation {
-  0% {
-    width: 0%;
-  }
-
-  40% {
-    width: 30%;
-  }
-
-  60% {
-    width: 70%;
-  }
-
-  100% {
-    width: 100%;
-  }
+.form {
+  padding: 30px 70px;
 }
